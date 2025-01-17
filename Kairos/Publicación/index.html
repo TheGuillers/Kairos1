@@ -1,0 +1,223 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairos Website</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-T3c6CoIi6uLrA9TneNEoa7RxnatzjcDSCmG1MXxSR1GAsXEV/Dwwykc2MPK8M2HN" crossorigin="anonymous">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css" integrity="sha512-z3gLpd7yknf1YoNbCzqRKc4qyor8gaKU1qmn+CShxbuBusANI9QpRohGBreCFkKxLhei6S9CQXFEbbKuqLg0DA==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <script src="https://maps.googleapis.com/maps/api/js?key=AIzaSyAk7S1jjrZl2yN6c8a0LMtQPbzMgGufago&callback=initMap" async defer></script>
+</head>
+<body>
+    <header>
+        <div class="header-container">
+            <a href="/" class="logo">Kairos Inmobiliaria</a>
+            <nav>
+                <div class="search-box">
+                    <input type="text" placeholder="Buscar..." id="search-input">
+                    <button class="search-btn">
+                        <i class="fas fa-search"></i>
+                    </button>
+                </div>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Favoritos</a>
+                    <a href="#" class="nav-link">Publicar</a>
+                    <a href="#" class="nav-link">Ingresar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <main>
+        <section id="propiedad-principal">
+            <div class="propiedad-principal-container">
+                <div class="info-propiedad">
+                    <div class="ubicacion-wrapper">
+                        <p class="ubicacion">Cusco, Cusco, Perú</p>
+                    </div>
+                    
+                    <div class="property-info">
+                        <h1 class="property-title">Casa con vista al lago en Cusco</h1>
+                        <p class="precio">S/ 1,122,000 | USD 300,000</p>
+                    </div>
+        
+                    <div class="botones">
+                        <a href="#contacto" class="btn-primary comprar">
+                            <i class="fas fa-shopping-cart"></i> Comprar
+                        </a>
+                        <a href="#" class="btn-secondary ver-info">
+                            <i class="fas fa-info-circle"></i> Ver Información
+                        </a>
+                    </div>
+                </div>
+        
+                <div class="carrusel-acciones">
+                    <div class="acciones-propiedad">
+                        <button class="action-btn favorito">
+                            <i class="fas fa-heart"></i>
+                        </button>
+                        <button class="action-btn compartir">
+                            <i class="fas fa-share-alt"></i>
+                        </button>
+                    </div>
+                    <div id="carrusel-principal" class="carousel-container">
+                        <div id="carouselExampleIndicators" class="carousel slide carousel-fade" data-bs-ride="carousel">
+                            <div class="carousel-indicators"></div>
+                            <div class="carousel-inner"></div>
+                            <button class="carousel-control-prev custom-carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="prev">
+                                <span class="carousel-control-prev-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Previous</span>
+                            </button>
+                            <button class="carousel-control-next custom-carousel-control" type="button" data-bs-target="#carouselExampleIndicators" data-bs-slide="next">
+                                <span class="carousel-control-next-icon" aria-hidden="true"></span>
+                                <span class="visually-hidden">Next</span>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="caracteristicas">
+            <h2 class="section-title">CARACTERÍSTICAS PRINCIPALES</h2>
+            <div class="caracteristicas-container-total">
+                <div class="caracteristicas-container principales">
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-ruler-combined"></i>
+                        </div>
+                        <h3>ÁREA DEL INMUEBLE</h3>
+                        <div class="caracteristica-details">
+                            <p>Área Ocupada: <span id="area-ocupada"></span> m²</p>
+                            <p>Área Techada: <span id="area-techada"></span> m²</p>
+                        </div>
+                    </div>
+        
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-home"></i>
+                        </div>
+                        <h3>VIVIENDA COMPLETA</h3>
+                        <div class="caracteristica-details">
+                            <p><span id="habitaciones"></span> Habitaciones</p>
+                            <p><span id="banos"></span> Baños</p>
+                        </div>
+                    </div>
+        
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-car"></i>
+                        </div>
+                        <h3>ESTACIONAMIENTO</h3>
+                        <div class="caracteristica-details">
+                            <p id="estacionamiento-texto"></p>
+                        </div>
+                    </div>
+                </div>
+        
+                <div id="caracteristicas-adicionales" class="caracteristicas-container adicionales oculto">
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-calendar-alt"></i>
+                        </div>
+                        <h3>ANTIGÜEDAD</h3>
+                        <div class="caracteristica-details">
+                            <p><span id="antiguedad"></span> años</p>
+                        </div>
+                    </div>
+        
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-building"></i>
+                        </div>
+                        <h3>PROYECCIÓN AÉREA</h3>
+                        <div class="caracteristica-details">
+                            <p><span id="proyeccion-aerea"></span> Pisos</p>
+                        </div>
+                    </div>
+        
+                    <div class="caracteristica-card">
+                        <div class="caracteristica-icon">
+                            <i class="fas fa-tree"></i>
+                        </div>
+                        <h3>ÁREAS VERDES</h3>
+                        <div class="caracteristica-details">
+                            <p id="areas-verdes-texto"></p>
+                        </div>
+                    </div>
+                </div>
+                <button id="ver-mas" class="ver-todo-btn">Ver todo</button>
+            </div>
+        </section>
+
+        <section id="sobre-inmueble" class="sobre-inmueble-section">
+            <div class="sobre-inmueble-container">
+                <h2 class="section-title">Sobre el inmueble</h2>
+                <div class="sobre-info">
+                    <div class="descripcion-container">
+                        <p id="descripcion-corta" class="descripcion-text"></p>
+                        <div class="amenities">
+                            <h3>Lugares cercanos</h3>
+                            <div class="amenities-grid">
+                                <div class="amenity">
+                                    <i class="fas fa-graduation-cap"></i>
+                                    <span>Universidades</span>
+                                </div>
+                                <div class="amenity">
+                                    <i class="fas fa-shopping-cart"></i>
+                                    <span>Centros comerciales</span>
+                                </div>
+                                <div class="amenity">
+                                    <i class="fas fa-hospital"></i>
+                                    <span>Hospitales</span>
+                                </div>
+                                <div class="amenity">
+                                    <i class="fas fa-bus"></i>
+                                    <span>Transporte público</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="mapa-container">
+                        <div id="map"></div>
+                        <a id="ver-en-maps" href="#" target="_blank" class="ver-detalles">
+                            <i class="fas fa-map-marker-alt"></i> Ver en Google Maps
+                        </a>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <section id="contacto">
+            <div class="contacto-container">
+                <div class="quienes-somos">
+                    <h2>¿QUIÉNES SOMOS?</h2>
+                    <div class="logo-container">
+                        <img id="logo-vendedor" src="" alt="Logo del vendedor">
+                    </div>
+                    <div class="social-icons">
+                        <a id="facebook-link" href="#" target="_blank"><i class="fab fa-facebook"></i></a>
+                        <a id="instagram-link" href="#" target="_blank"><i class="fab fa-instagram"></i></a>
+                        <a id="twitter-link" href="#" target="_blank"><i class="fab fa-twitter"></i></a>
+                    </div>
+                    <h3 id="nombre-vendedor-titulo" class="nombre-inmobiliaria"></h3>
+                </div>
+                <div class="contactanos">
+                    <h2>CONTÁCTANOS</h2>
+                    <a id="telefono-link" href="#" class="llamanos">
+                        <i class="fas fa-phone"></i> Llámanos
+                    </a>
+                    <a id="whatsapp-link" href="#" class="chat">
+                        <i class="fab fa-whatsapp"></i> Chat Seguro
+                    </a>
+                    <a href="#" class="info-link">¿POR QUÉ ELEGIR LA COMUNICACIÓN POR KAIROS.COM?</a>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

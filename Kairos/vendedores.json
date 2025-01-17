@@ -1,0 +1,24 @@
+{
+    "vendedores": [
+      {
+        "id": 1,
+        "nombre": "Kairos Inmobiliaria",
+        "logo": "logo1.png",
+        "telefono": "+51987654321",
+        "whatsapp": "51987654321",
+        "facebook": "juanperez_fb",
+        "instagram": "juanperez_ig",
+        "twitter": "juanperez_tw"
+      },
+      {
+        "id": 2,
+        "nombre": "Maria Lopez",
+        "logo": "logo2.png",
+        "telefono": "+51987654322",
+        "whatsapp": "51987654322",
+        "facebook": "marialopez_fb",
+        "instagram": "marialopez_ig",
+        "twitter": "marialopez_tw"
+      }
+    ]
+  }

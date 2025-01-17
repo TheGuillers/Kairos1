@@ -1,0 +1,180 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Kairos Inmobiliaria</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <link rel="stylesheet" href="index.css">
+</head>
+<body>
+    <!-- Header -->
+    <header>
+        <div class="header-container">
+            <div class="logo-wrapper">
+                <a href="index.html">
+                    <img src="logo.png" alt="Kairos Inmobiliaria" class="logo-icon">
+                    <span class="logo-text">Kairos Inmobiliaria</span>
+                </a>
+            </div>
+            
+            <nav>
+                <div class="nav-links">
+                    <a href="#" class="nav-link">Comprar <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Alquilar <i class="fas fa-chevron-down"></i></a>
+                    <a href="#" class="nav-link">Buscar inmobiliarias</a>
+                </div>
+                <div class="nav-actions">
+                    <a href="publicar.html" class="nav-btn btn-publicar">Publicar</a>
+                    <a href="#" class="nav-btn btn-ingresar">Ingresar</a>
+                </div>
+            </nav>
+        </div>
+    </header>
+
+    <!-- Hero Section -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <h1>La llave al espacio que buscas</h1>
+            <div class="search-container">
+                <div class="search-tabs">
+                    <button class="search-tab active">Alquilar</button>
+                    <button class="search-tab">Comprar</button>
+                    <button class="search-tab">Proyectos</button>
+                </div>
+                <div class="search-form">
+                    <div class="search-inputs">
+                        <select class="property-type">
+                            <option value="">Tipo de Propiedad</option>
+                            <option value="casa">Casa</option>
+                            <option value="departamento">Departamento</option>
+                            <option value="habitacion">Habitación</option>
+                            <option value="cochera">Cochera</option>
+                            <option value="terreno">Terreno</option>
+                            <option value="local">Local</option>
+                            <option value="oficina">Oficina</option>
+                        </select>
+                        <div class="location-search-wrapper">
+                            <input type="text" 
+                                   class="location-input" 
+                                   placeholder="Ingresa ubicaciones o características (ej: piscina)"
+                                   autocomplete="off"
+                                   aria-label="Buscá por ubicación o palabra clave">
+                        </div>
+                        <button class="search-button">
+                            <i class="fas fa-search"></i> Buscar
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <main class="main-content">
+        <!-- Publicaciones Recientes -->
+        <section class="section-properties recent">
+            <div class="container" id="recentProperties">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
+
+        <!-- Busca tu Próxima Casa -->
+        <section class="section-properties houses">
+            <div class="container" id="houses">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
+
+        <!-- Tu Próximo Depa -->
+        <section class="section-properties apartments">
+            <div class="container" id="apartments">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
+
+        <!-- Proyectos 2025 -->
+        <section class="section-properties future">
+            <div class="container" id="futureProjects">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
+
+        <!-- Inmobiliarias -->
+        <section class="section-agencies">
+            <div class="container" id="agencies">
+                <!-- Contenido generado por JS -->
+            </div>
+        </section>
+    </main>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="container">
+            <div class="footer-content">
+                <div class="footer-section">
+                    <h3>Kairos Inmobiliaria</h3>
+                    <p>Tu mejor opción para encontrar tu hogar ideal</p>
+                </div>
+                <div class="footer-section">
+                    <h3>Enlaces útiles</h3>
+                    <ul>
+                        <li><a href="#">Sobre nosotros</a></li>
+                        <li><a href="#">Publicar propiedad</a></li>
+                        <li><a href="#">Términos y condiciones</a></li>
+                        <li><a href="#">Política de privacidad</a></li>
+                    </ul>
+                </div>
+                <div class="footer-section">
+                    <h3>Contacto</h3>
+                    <p>
+                        <i class="fas fa-phone"></i> +51 123 456 789<br>
+                        <i class="fas fa-envelope"></i> info@kairosinmobiliaria.com<br>
+                        <i class="fas fa-map-marker-alt"></i> Piura, Perú
+                    </p>
+                </div>
+                <div class="footer-section">
+                    <h3>Síguenos</h3>
+                    <div class="social-links">
+                        <a href="#" aria-label="Facebook"><i class="fab fa-facebook"></i></a>
+                        <a href="#" aria-label="Instagram"><i class="fab fa-instagram"></i></a>
+                        <a href="#" aria-label="Twitter"><i class="fab fa-twitter"></i></a>
+                        <a href="#" aria-label="LinkedIn"><i class="fab fa-linkedin"></i></a>
+                    </div>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <p>&copy; 2025 Kairos Inmobiliaria. Todos los derechos reservados.</p>
+            </div>
+        </div>
+    </footer>
+
+    <!-- Template para las cards (oculto) -->
+    <template id="property-card-template">
+        <div class="property-card">
+            <div class="property-image">
+                <img src="" alt="">
+                <button class="property-favorite" data-id="">
+                    <i class="far fa-heart"></i>
+                </button>
+            </div>
+            <div class="property-info">
+                <div class="property-price"></div>
+                <div class="property-location">
+                    <i class="fas fa-map-marker-alt"></i>
+                    <span></span>
+                </div>
+                <div class="property-details">
+                    <span class="area"><i class="fas fa-ruler-combined"></i> <span></span></span>
+                    <span class="rooms"><i class="fas fa-bed"></i> <span></span></span>
+                    <span class="baths"><i class="fas fa-bath"></i> <span></span></span>
+                </div>
+            </div>
+        </div>
+    </template>
+
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="index.js"></script>
+</body>
+</html>
